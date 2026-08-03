@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>About the Chamber — RAVASA | Shah Paresh & Associates</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .about-body {
+      font-size: 13px;
+      color: var(--body-text);
+      line-height: 1.85;
+      margin-bottom: 18px;
+    }
+
+    .pillars {
+      display: flex;
+      flex-direction: column;
+      margin-top: 36px;
+    }
+
+    .pillar {
+      display: flex;
+      gap: 18px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .pillar:first-child {
+      border-top: 1px solid var(--border);
+    }
+
+    .pnum {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      min-width: 26px;
+      margin-top: 2px;
+    }
+
+    .ptitle {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+
+    .ptext {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    /* Vision/Mission grid */
+    .vm-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      background: var(--border);
+    }
+
+    .vm-card {
+      padding: 40px 36px;
+      background: var(--white);
+    }
+
+    .vm-card.navy {
+      background: var(--navy);
+    }
+
+    .vm-lbl {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .vm-card.navy .vm-lbl {
+      color: var(--accent2);
+    }
+
+    .vm-h {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    .vm-card.navy .vm-h {
+      color: var(--white);
+    }
+
+    .vm-t {
+      font-size: 13px;
+      color: var(--body-text);
+      line-height: 1.75;
+    }
+
+    .vm-card.navy .vm-t {
+      color: rgba(255, 255, 255, 0.65);
+    }
+
+    /* Milestones */
+    .milestones {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .ms {
+      display: grid;
+      grid-template-columns: 96px 1fr;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .ms:first-child {
+      border-top: 1px solid var(--border);
+    }
+
+    .ms-yr {
+      padding: 20px 16px;
+      background: var(--navy);
+      color: var(--accent2);
+      font-size: 12px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+    }
+
+    .ms-txt {
+      padding: 20px 24px;
+      font-size: 13px;
+      color: var(--body-text);
+      line-height: 1.65;
+      display: flex;
+      align-items: center;
+    }
+
+    /* ── TEAM SECTION ── */
+    .team-grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .team-card {
+      display: flex;
+      align-items: stretch;
+      width: 900px;
+      max-width: 100%;
+      height: 300px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      transition: box-shadow 0.25s, border-color 0.25s;
+    }
+
+    .team-card:hover {
+      box-shadow: 0 12px 40px rgba(28, 49, 112, 0.12);
+      border-color: var(--navy);
+    }
+
+    .team-photo-placeholder {
+      flex: 0 0 36%;
+      max-width: 36%;
+      position: relative;
+      background: var(--navy);
+      min-height: 0;
+      overflow: hidden;
+    }
+
+    .team-photo-placeholder span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 52px;
+      font-weight: 700;
+      color: var(--accent2);
+      letter-spacing: 0.05em;
+    }
+
+    .team-photo {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .team-right {
+      flex: 1 1 60%;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      border-left: 3px solid var(--accent);
+    }
+
+    .team-info {
+      padding: 26px 40px 8px;
+      flex: 1;
+    }
+
+    .team-name {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .team-role {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .team-bio {
+      font-size: 13px;
+      color: var(--body-text);
+      line-height: 1.6;
+      margin-bottom: 8px;
+    }
+
+    .team-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding: 8px 40px 22px;
+    }
+
+    .team-tag {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      background: var(--cream);
+      color: var(--navy);
+      border: 1px solid var(--border);
+    }
+
+    @media(max-width:1024px) {
+
+      .two-col,
+      .vm-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .team-photo-placeholder {
+        flex: 0 0 36%;
+        max-width: 36%;
+        min-height: 300px;
+      }
+
+      .ms {
+        grid-template-columns: 72px 1fr;
+      }
+    }
+
+    @media(max-width:768px) {
+      .two-col {
+        gap: 36px;
+      }
+
+      .vm-card {
+        padding: 28px 24px;
+      }
+
+      .team-card {
+        flex-direction: column;
+        height: auto;
+      }
+
+      .team-photo-placeholder {
+        flex: none;
+        max-width: 100%;
+        width: 100%;
+        min-height: 320px;
+        height: 320px;
+      }
+
+      .team-right {
+        flex: none;
+        border-left: none;
+        border-top: 3px solid var(--accent);
+      }
+
+      .team-info {
+        padding: 28px 24px 16px;
+      }
+
+      .team-tags {
+        gap: 4px;
+        padding: 0 24px 28px;
+      }
+
+      .ms {
+        grid-template-columns: 64px 1fr;
+      }
+
+      .ms-yr {
+        font-size: 11px;
+        padding: 16px 10px;
+      }
+
+      .ms-txt {
+        padding: 16px 18px;
+      }
+
+      .milestones {
+        overflow: hidden;
+      }
+    }
+
+    @media(max-width:480px) {
+      .ms {
+        grid-template-columns: 56px 1fr;
+      }
+
+      .ms-yr {
+        font-size: 10px;
+        padding: 14px 8px;
+        writing-mode: horizontal-tb;
+      }
+
+      .team-photo-placeholder {
+        height: 220px;
+      }
+
+      .team-photo-placeholder span {
+        font-size: 40px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="topbar-mount"></div>
+  <div id="nav-mount"></div>
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> <span>›</span> About the Chamber</div>
+      <div class="page-hero-eyebrow">About the Chamber</div>
+      <h1>Founded on Principled<br />Tax Representation</h1>
+      <p>An independent tax litigation chamber based in Mumbai, focused exclusively on Income-tax and State tax (now
+        GST) disputes,
+        appellate proceedings and tax controversy matters since 1987.</p>
+    </div>
+  </div>
+
+  <!-- OVERVIEW -->
+  <section class="section">
+    <div class="container">
+      <div class="two-col">
+        <div>
+          <div class="eyebrow">Chamber Overview</div>
+          <h2 class="section-title">Shah Paresh<br />&amp; Associates</h2>
+          <p class="about-body">Shah Paresh &amp; Associates is an independent tax litigation chamber based in Mumbai.
+            The chamber focuses exclusively on Income-tax and State tax (now GST) litigation, appellate proceedings and
+            tax controversy
+            matters. The practice is intentionally confined to litigation, appellate proceedings and tax controversy
+            matters.
+          </p>
+          <p class="about-body">The chamber operates on a model of personal principal involvement — every matter is
+            handled directly by CA Paresh Shah, ensuring consistency, strategic depth and undivided professional
+            attention at every stage of proceedings.</p>
+          <p class="about-body">We are a dedicated appellate and litigation-focused practice, representing taxpayers in
+            tax disputes and contentious proceedings. Independent of routine compliance work, the chamber focuses on
+            strategic advocacy in appeals and tax controversy proceedings, with emphasis on procedural precision,
+            careful preparation and principled representation.</p>
+          <div class="quote-block">
+            <p>"Every matter deserves direct senior professional involvement, careful preparation and focused
+              attention."</p>
+          </div>
+          <div class="pillars">
+            <div class="pillar"><span class="pnum">01</span>
+              <div>
+                <div class="ptitle">Personal Principal Involvement</div>
+                <div class="ptext">Every matter remains under the direct supervision and involvement of the Principal.
+                  Clients receive continuity of senior professional attention throughout the engagement.</div>
+              </div>
+            </div>
+            <div class="pillar"><span class="pnum">02</span>
+              <div>
+                <div class="ptitle">Exclusive Tax Litigation Focus</div>
+                <div class="ptext">Income-tax and State tax (now GST) litigation only — no dilution of practice across
+                  audit or
+                  advisory.</div>
+              </div>
+            </div>
+            <div class="pillar"><span class="pnum">03</span>
+              <div>
+                <div class="ptitle">Limited Matters, Full Attention</div>
+                <div class="ptext">The chamber accepts a limited number of matters ensuring undivided senior attention
+                  for every client.</div>
+              </div>
+            </div>
+            <div class="pillar"><span class="pnum">04</span>
+              <div>
+                <div class="ptitle">Strategy-Driven Approach</div>
+                <div class="ptext">Every matter built on thorough reading of facts, law and procedure — not templated
+                  arguments.</div>
+              </div>
+            </div>
+          </div>
+          <p class="about-body" style="margin-top:28px">The chamber is focused exclusively on tax litigation, appellate
+            proceedings and tax controversy matters. Independent of routine compliance and audit work, it provides
+            strategic representation in contentious tax matters before tax authorities, appellate forums and tribunals.
+            The practice is built around careful preparation, procedural precision and direct Principal involvement in
+            every matter.</p>
+        </div>
+        <div>
+          <div class="notice-box" style="margin-bottom:28px">
+            <p><strong>Focused Practice:</strong> The chamber accepts a limited number of matters and is focused
+              exclusively on Income-tax and State tax (now GST) litigation, appellate proceedings and related tax
+              controversy matters.
+              Enquiries involving appellate proceedings, remand matters, adjudication proceedings and other contentious
+              tax disputes are welcome.</p>
+          </div>
+          <table class="info-table">
+            <tr>
+              <td>Chamber Name</td>
+              <td>Shah Paresh &amp; Associates</td>
+            </tr>
+            <tr>
+              <td>Nature</td>
+              <td>Independent Tax Litigation Chamber</td>
+            </tr>
+            <tr>
+              <td>Location</td>
+              <td>Mumbai, Maharashtra, India</td>
+            </tr>
+            <tr>
+              <td>Founded</td>
+              <td>1987</td>
+            </tr>
+            <tr>
+              <td>Principal</td>
+              <td>CA Paresh Shah, FCA</td>
+            </tr>
+            <tr>
+              <td>Practice Focus</td>
+              <td>Income-Tax &amp; State tax (now GST) Litigation exclusively</td>
+            </tr>
+            <tr>
+              <td>LinkedIn</td>
+              <td><a href="https://www.linkedin.com/in/pareshravasa" target="_blank"
+                  style="color:var(--navy);text-decoration:underline">Shah Paresh &amp; Associates</a></td>
+            </tr>
+            <tr>
+              <td>Meetings</td>
+              <td>By Prior Appointment</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISION / MISSION -->
+  <section class="section band-offwhite" style="padding:0">
+    <div class="container" style="padding-top:0;padding-bottom:0">
+      <div class="vm-grid">
+        <div class="vm-card">
+          <div class="vm-lbl">Vision</div>
+          <div class="vm-h">Our Vision</div>
+          <div class="vm-t">To be a trusted independent tax litigation chamber known for principled advocacy,
+            intellectual rigour and effective representation in complex tax disputes.
+            Mission<br>
+            To provide focused, strategic and independent representation in Income-tax, GST and related tax controversy
+            matters, combining technical expertise, procedural precision and direct principal involvement.</div>
+        </div>
+        <div class="vm-card navy">
+          <div class="vm-lbl">Mission</div>
+          <div class="vm-h">Our Mission</div>
+          <div class="vm-t">To serve as a trusted litigation chamber for businesses, high-net-worth individuals and
+            professionals navigating complex Income-tax and State tax (now GST) disputes — bringing depth of experience,
+            clarity of
+            strategy and personal commitment.</div>
+        </div>
+        <div class="vm-card">
+          <div class="vm-lbl">Practice Philosophy</div>
+          <div class="vm-h">How We Practise</div>
+          <div class="vm-t">Every matter is built on careful analysis of facts, law, procedural requirements and
+            appellate precedents. Particular emphasis is placed on complex disputes, difficult questions of fact or law
+            and issues requiring specialised appellate strategy. Independence of the chamber ensures focused attention
+            and transparency at every stage.</div>
+        </div>
+        <div class="vm-card" style="background:var(--cream)">
+          <div class="vm-lbl">Industries Served
+          </div>
+          <div class="vm-h">Client Types</div>
+          <div class="vm-t">Closely-held companies, partnerships &amp; LLPs · High-net-worth individuals &amp; promoters
+            · Real estate, construction &amp; infrastructure · Manufacturing &amp; trading enterprises · Professional
+            service firms · NRIs · Trusts &amp; non-profit entities</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ TEAM SECTION ══════════════════════ -->
+
+  <section class="section" id="team">
+    <div class="container">
+      <div class="eyebrow">Professional Leadership</div>
+      <h2 class="section-title">The Professionals Behind<br />the Chamber</h2>
+      <p class="section-sub">A small, focused team of experienced tax litigation professionals — led personally by the
+        Principal, ensuring depth of expertise and direct senior attention on every matter.</p>
+
+      <div class="team-grid">
+
+        <!-- CA Paresh Shah -->
+
+        <div class="team-card">
+          <div class="team-photo-placeholder">
+
+            <img src="ca-paresh-2.jpg" alt="Team Member" class="team-photo">
+          </div>
+          <div class="team-right">
+            <div class="team-info">
+              <div class="team-name">CA Paresh Shah <a class="linkdin-icon"
+                  href="https://www.linkedin.com/in/pareshravasa" target="_blank" class="fsoc-btn fsoc-li"
+                  title="LinkedIn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z">
+                    </path>
+                  </svg>
+                </a></div>
+              <div class="team-role">Founder &amp; Principal · FCA</div>
+              <p class="team-bio">CA Paresh Shah is a Fellow Chartered Accountant (ICAI) with over 35 years of continuous
+                practice in Income-tax and State tax (now GST) litigation.</p>
+              <p class="team-bio" id="bio-extra" style="display:none;">He is the Founder and Principal of Shah Paresh
+                &amp; Associates
+                and is personally involved in every matter undertaken by the chamber — from strategy formulation to
+                representation at hearings. His career spans extensive representation before income-tax authorities,
+                CIT(A), ITAT
+                Mumbai and the Bombay High Court. Beyond litigation, he has been an active contributor to the CA
+                profession through speaking engagements at WIRC of ICAI, technical publications and leadership of
+                professional associations.</p>
+              <a href="#" id="bio-toggle" onclick="
+    var p = document.getElementById('bio-extra');
+    var t = document.getElementById('bio-toggle');
+    if (p.style.display === 'none') {
+      p.style.display = '';
+      t.textContent = 'Read Less';
+    } else {
+      p.style.display = 'none';
+      t.textContent = 'Read More';
+    }
+    return false;
+  ">Read More</a>
+            </div>
+            <div class="team-tags">
+              <span class="team-tag">Income-Tax Litigation</span>
+              <span class="team-tag">State tax (now GST) Disputes</span>
+              <span class="team-tag">ITAT</span>
+              <span class="team-tag">CIT(A) Appeals</span>
+              <span class="team-tag">Tax Controversy</span>
+              <span class="team-tag">Writ Petitions</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <div class="team-photo-placeholder">
+
+            <img src="CA maim.jpg" alt="Team Member" class="team-photo">
+          </div>
+          <div class="team-right">
+            <div class="team-info">
+              <div class="team-name">CA Simoni Doshi <a class="linkdin-icon"
+                  href="https://www.linkedin.com/in/simoni-doshi-67378528a/" target="_blank" class="fsoc-btn fsoc-li"
+                  title="LinkedIn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z">
+                    </path>
+                  </svg>
+                </a></div>
+              <div class="team-role"></div>
+              <p class="team-bio">Her work is focused on appellate preparation, factual analysis, legal research and
+                drafting support in contentious tax matters, contributing to the chamber's detailed and strategy-driven
+                approach to litigation.</p>
+            </div>
+            <div class="team-tags">
+              <span class="team-tag">Appellate preparation</span>
+              <span class="team-tag">Factual analysis</span>
+              <span class="team-tag">Legal research</span>
+              <span class="team-tag">Drafting support</span>
+              <span class="team-tag">Tax litigation assistance</span>
+              <span class="team-tag">Case strategy support</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <!-- <div class="notice-box" style="margin-top:36px">
+      <p><strong>Professional Photographs:</strong> Please supply professional photographs for CA Paresh Shah and CA
+        Simoni Doshi to replace the placeholder initials above. Images should be supplied to
+        <strong>info@aspirantsolutions.in</strong> as high-resolution JPG or PNG files.
+      </p>
+    </div> -->
+    </div>
+  </section>
+
+  <!-- MILESTONES -->
+  <section class="section band-offwhite">
+    <div class="container">
+      <div class="eyebrow">Key Milestones</div>
+      <h2 class="section-title">Over Three Decades<br />of Professional Practice</h2>
+      <p class="section-sub">A continuous record of professional involvement in tax litigation, appellate representation
+        and the Chartered Accountancy profession.</p>
+      <div class="milestones">
+        <div class="ms">
+          <div class="ms-yr">1987</div>
+          <div class="ms-txt">Commenced professional practice as a Chartered Accountant</div>
+        </div>
+        <div class="ms">
+          <div class="ms-yr">1990s</div>
+          <div class="ms-txt">Progressive focus on Income-tax litigation, appellate proceedings and tax controversy
+            matters.</div>
+        </div>
+        <div class="ms">
+          <div class="ms-yr">2005</div>
+          <div class="ms-txt">Speaker on Value Added Tax (VAT) at Y. B. Chavan Hall, Mumbai before a gathering of
+            business leaders and professionals.</div>
+        </div>
+        <div class="ms">
+          <div class="ms-yr">2006</div>
+          <div class="ms-txt">Co-Founder, Jain CA Federation, Mumbai. Chief Co-ordinator, First National Conference of
+            Jain Chartered Accountants &amp; Advocates.</div>
+        </div>
+        <div class="ms">
+          <div class="ms-yr">2007</div>
+          <div class="ms-txt">Secretary, International Conference of Jain CAs &amp; Advocates. Co-opted Member, Public
+            Relations Committee, WIRC of ICAI.</div>
+        </div>
+        <div class="ms">
+          <div class="ms-yr">2009</div>
+          <div class="ms-txt">Speaker on "Procedural Aspects in Formation of LLP" — Full-Day Seminar, WIRC of ICAI,
+            Thakur College Mumbai.</div>
+        </div>
+        <div class="ms">
+          <div class="ms-yr">2023–2025</div>
+          <div class="ms-txt">Director, Mumbai Chapter — Jain CA Federation.</div>
+        </div>
+        <div class="ms">
+          <div class="ms-yr">2000s–Present</div>
+          <div class="ms-txt">Author of articles and commentaries on taxation published in professional journals,
+            newspapers and other publications.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-band">
+    <div class="container">
+      <div>
+        <h2>Ready to Discuss Your Matter?<br /><span>Meetings by Prior Appointment</span></h2>
+      </div>
+      <a href="contact.html" class="btn btn-accent">Enquire Now.</a>
+    </div>
+  </div>
+
+  <div id="footer-mount"></div>
+  <script src="shared.js"></script>
+</body>
+
+</html>

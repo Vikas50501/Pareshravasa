@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Insights - RAVASA | Shah Paresh & Associates</title>
+  <meta name="description" content="Tax litigation insights from Shah Paresh & Associates." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .blog-kicker {
+      color: var(--navy);
+      font-size: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="topbar-mount"></div>
+  <div id="nav-mount"></div>
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> <span>›</span> Insights</div>
+      <div class="page-hero-eyebrow">Tax Litigation Insights</div>
+      <h1>INSIGHTS</h1>
+      <p>Selected writing on tax litigation, appellate strategy and emerging issues that matter in practice.</p>
+    </div>
+  </div>
+
+  <section class="section band-offwhite">
+    <div class="container">
+      <div class="blog-section-head">
+        <div>
+          <div class="eyebrow">Latest Insight</div>
+          <h2 class="section-title">Tax Litigation Insight No - 3 (Part I)</h2>
+        </div>
+        <a href="blog-insight-3.html" class="btn btn-navy">Open Article</a>
+      </div>
+
+      <div class="blog-grid" data-blog-grid>
+        <article class="blog-card">
+          <a href="blog-insight-3.html" class="blog-card-media" aria-label="Open Repeal, Saving and Pending Assessment Proceedings">
+            <img src="assets/blog-cover.svg" alt="Abstract cover for Tax Litigation Insight No - 3" />
+          </a>
+          <div class="blog-card-body">
+            <div class="blog-kicker">Tax Litigation Insight No - 3 (Part I)</div>
+            <div class="blog-meta">
+              <span>Tax Litigation Insights</span>
+              <span>Published on 29 July 2026</span>
+              <span>Ongoing series</span>
+            </div>
+            <h3 class="blog-title">Repeal, Saving and Pending Assessment Proceedings</h3>
+            <p class="blog-excerpt">The article explains how repeal, saving provisions and pending assessment proceedings
+              fit together during the transition to the new income-tax law.</p>
+            <a href="blog-insight-3.html" class="btn btn-outline">Read More</a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <a href="blog-insight-2.html" class="blog-card-media" aria-label="Open Hexaware and Retrospective Validation: Emerging Constitutional Issues">
+            <img src="assets/blog-cover.svg" alt="Abstract cover for Tax Litigation Insight No - 2" />
+          </a>
+          <div class="blog-card-body">
+            <div class="blog-kicker">Tax Litigation Insight No - 2</div>
+            <div class="blog-meta">
+              <span>Tax Litigation Insights</span>
+              <span>Published on 20 July 2026</span>
+              <span>5 min read</span>
+            </div>
+            <h3 class="blog-title">Hexaware and Retrospective Validation: Emerging Constitutional Issues</h3>
+            <p class="blog-excerpt">The article explains how the debate moved from procedural compliance to a broader
+              constitutional challenge after the introduction of Section 147A.</p>
+            <a href="blog-insight-2.html" class="btn btn-outline">Read More</a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <a href="blog-insight-1.html" class="blog-card-media" aria-label="Open The First Appeal: Where Tax Litigation Is Often Won or Lost">
+            <img src="assets/blog-cover.svg" alt="Abstract cover for Tax Litigation Insight No - 1" />
+          </a>
+          <div class="blog-card-body">
+            <div class="blog-kicker">Tax Litigation Insight No - 1</div>
+            <div class="blog-meta">
+              <span>Tax Litigation Insights</span>
+              <span>Published on 07 July 2026</span>
+              <span>5 min read</span>
+            </div>
+            <h3 class="blog-title">The First Appeal: Where Tax Litigation Is Often Won or Lost</h3>
+            <p class="blog-excerpt">The article shows how the strength of a first appeal is built earlier, through
+              careful facts, records and preparation during assessment.</p>
+            <a href="blog-insight-1.html" class="btn btn-outline">Read More</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="blog-empty" data-blog-empty hidden>No insights found.</div>
+
+      <div class="blog-pagination" aria-label="Pagination">
+        <span class="blog-page disabled" aria-hidden="true">Prev</span>
+        <span class="blog-page active">1</span>
+        <span class="blog-page disabled" aria-hidden="true">Next</span>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-mount"></div>
+  <script src="shared.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const grid = document.querySelector('[data-blog-grid]');
+      const empty = document.querySelector('[data-blog-empty]');
+      if (grid && empty && !grid.children.length) {
+        empty.hidden = false;
+      }
+    });
+  </script>
+</body>
+
+</html>

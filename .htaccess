@@ -1,0 +1,7 @@
+# Protect the mail credentials file from being fetched directly
+<Files "mail-config.php">
+    Require all denied
+</Files>
+
+# Block direct browser access to the bundled PHPMailer library
+RedirectMatch 403 ^/phpmailer/.*$

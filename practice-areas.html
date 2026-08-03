@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Practice Areas — RAVASA | Shah Paresh & Associates</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .areas-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      background: var(--border);
+      margin-top: 40px;
+    }
+
+    .area-card {
+      background: var(--white);
+      padding: 40px 36px;
+      border-top: 3px solid transparent;
+      transition: all 0.22s;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .area-card:hover {
+      background: var(--cream);
+      border-top-color: var(--accent);
+    }
+
+    .area-num {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      color: var(--accent);
+    }
+
+    .area-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.3;
+    }
+
+    .area-desc {
+      font-size: 13px;
+      color: var(--body-text);
+      line-height: 1.8;
+      flex: 1;
+    }
+
+    .area-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .tag {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      background: var(--cream);
+      color: var(--navy);
+      border: 1px solid var(--border);
+    }
+
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px;
+      background: var(--border);
+      margin-top: 40px;
+    }
+
+    .ap-card {
+      background: var(--white);
+      padding: 32px 26px;
+      transition: background 0.22s;
+    }
+
+    .ap-card:hover {
+      background: var(--cream);
+    }
+
+    .ap-step {
+      font-size: 30px;
+      font-weight: 700;
+      color: rgba(28, 49, 112, 0.09);
+      margin-bottom: 14px;
+    }
+
+    .ap-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .ap-text {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    @media(max-width:1024px) {
+      .areas-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .approach-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media(max-width:768px) {
+      .areas-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .approach-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .area-card {
+        padding: 28px 24px;
+      }
+
+      .ap-card {
+        padding: 24px 20px;
+      }
+
+      .area-tags {
+        gap: 4px;
+      }
+    }
+
+    @media(max-width:480px) {
+      .area-card {
+        padding: 24px 18px;
+      }
+
+      .area-title {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="topbar-mount"></div>
+  <div id="nav-mount"></div>
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> <span>›</span> Practice Areas</div>
+      <div class="page-hero-eyebrow">Practice Areas</div>
+      <h1>Exclusively Income-Tax<br />&amp; State tax (now GST) Litigation</h1>
+      <p>The chamber undertakes matters where specialised appellate strategy and experienced representation make a
+        material difference to the outcome.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="notice-box">
+        <p><strong>Focused Practice:</strong> Shah Paresh &amp; Associates undertakes only Income-tax and State tax (now
+          GST) litigation, appellate proceedings and tax controversy matters. The chamber does not undertake audit,
+          accounting, general advisory or compliance work. This focused approach ensures that the Principal's full
+          expertise and attention is directed entirely at contentious tax matters.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="eyebrow">Practice Areas</div>
+      <h2 class="section-title">Five Core Areas<br />of Tax Litigation Practice</h2>
+      <div class="areas-grid">
+        <div class="area-card">
+          <div class="area-num">AREA 01</div>
+          <div class="area-title">Income-Tax Litigation &amp; Appeals</div>
+          <p class="area-desc">Assessment, reassessment and related proceedings before income-tax authorities.
+            Representation in appellate proceedings before the Commissioner of Income-tax (Appeals) and the Income Tax
+            Appellate Tribunal. Assistance to counsel in High Court and Supreme Court matters involving complex tax
+            disputes. Particular focus on contentious matters requiring specialised appellate strategy, factual
+            reconstruction and detailed analysis of tax and accounting issues.</p>
+          <div class="area-tags"><span class="tag">CIT(A)
+              Appeals</span><span class="tag">ITAT Appeals</span><span class="tag">Penalty Proceedings</span></div>
+        </div>
+        <div class="area-card">
+          <div class="area-num">AREA 02</div>
+          <div class="area-title">Indirect Tax
+            &amp; Litigation & Appeals</div>
+          <p class="area-desc">Representation in indirect tax disputes arising under State tax (now GST) and earlier
+            indirect tax laws, including VAT, Sales Tax and Central Sales Tax. Matters include adjudication proceedings,
+            show-cause notices, appellate proceedings, input tax credit disputes, classification issues, refund matters
+            and disputes arising from investigation and enforcement actions. Particular focus is placed on contentious
+            matters involving significant financial exposure, procedural irregularities and specialised appellate
+            strategy.</p>
+          <div class="area-tags"><span class="tag">VAT & CST Matters
+            </span><span class="tag">Show-Cause Notices</span><span class="tag">Enforcement & Investigation
+              Cases</span><span class="tag">ITC Disputes</span><span class="tag">State tax (now GST) Appeals</span><span
+              class="tag">Refund Matters</span></div>
+        </div>
+        <div class="area-card">
+          <div class="area-num">AREA 03</div>
+          <div class="area-title">Tax Controversy Strategy</div>
+          <p class="area-desc">Strategic advisory and dispute-management support in complex tax controversies. Matters include litigation strategy, search and seizure matters, multi-year disputes, compounding proceedings, risk assessment, factual reconstruction and preparation of position papers for contentious tax proceedings.<br>
+Particular focus is placed on matters involving novel issues, conflicting authorities, significant factual complexity, or situations where settled precedent may be limited or unavailable.<br>
+Many contentious tax disputes require detailed examination of accounting records, financial statements and underlying commercial transactions. The chamber's approach integrates legal analysis with factual and accounting review wherever necessary.
+          </p>
+          <div class="area-tags"><span class="tag">Litigation Strategy</span><span class="tag">Complex Tax Controversies
+            </span><span class="tag">Multi-Year Disputes</span><span class="tag">Search &amp;
+              Seizure</span><span class="tag">Risk Mapping</span><span class="tag">Position Papers</span></div>
+        </div>
+        <div class="area-card">
+          <div class="area-num">AREA 04</div>
+          <div class="area-title">Writ &amp; Constitutional Matters</div>
+          <p class="area-desc">Assistance in writ proceedings and judicial review matters arising from tax disputes.
+            Matters include jurisdictional challenges, violations of natural justice, procedural irregularities,
+            recovery proceedings, stay applications and other issues requiring intervention by constitutional courts.
+            The chamber works closely with counsel in matters involving specialised tax and accounting issues.</p>
+          <div class="area-tags"><span class="tag">Writ Petitions</span><span class="tag">Jurisdictional Challenges
+            </span><span class="tag">High Court</span> <span class="tag">Natural Justice Issues
+            </span><span class="tag">Stay & Recovery Matters</span><span class="tag">Stay Applications</span><span
+              class="tag">Constitutional Matters</span></div>
+        </div>
+        <div class="area-card">
+          <div class="area-num">AREA 05</div>
+          <div class="area-title">Appellate & Remand Proceedings
+          </div>
+          <p class="area-desc">Preparation and conduct of appellate proceedings arising from complex tax disputes.
+            Matters include first appeals, tribunal proceedings, remand proceedings, stay applications and development
+            of appellate strategy. Particular emphasis is placed on detailed factual analysis, preparation of grounds of
+            appeal and comprehensive written submissions.</p>
+          <div class="area-tags"><span class="tag">CIT(A) Appeals
+            </span><span class="tag">ITAT Proceedings
+            </span><span class="tag">Remand Proceedings
+            </span><span class="tag">Stay Applications</span><span class="tag">First Appeals</span><span
+              class="tag">Second Appeals</span><span class="tag">Remand Matters</span></div>
+        </div>
+        <div class="area-card" style="background:var(--navy);border-top-color:var(--accent)">
+          <div style="height:100%;display:flex;flex-direction:column;justify-content:center;gap:18px">
+            <p style="font-size:14px;font-style:italic;color:rgba(255,255,255,0.75);line-height:1.7">"The chamber
+              focuses on matters where specialised appellate strategy, procedural precision and experienced
+              representation make a material difference."</p>
+            <div style="height:1px;background:rgba(200,168,75,0.35)"></div>
+            <p style="font-size:12px;color:rgba(255,255,255,0.45);line-height:1.65">To discuss whether your matter falls
+              within the chamber's practice, please contact the chamber with a brief description of the dispute, forum
+              and current stage of proceedings.</p>
+            <a href="contact.html" class="btn btn-accent" style="align-self:flex-start">Enquire Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band-offwhite">
+    <div class="container">
+      <div class="eyebrow">Our Approach</div>
+      <h2 class="section-title">How the Chamber<br />Approaches Every Matter</h2>
+      <div class="approach-grid">
+        <div class="ap-card">
+          <div class="ap-step">01</div>
+          <div class="ap-title">Initial Review</div>
+          <div class="ap-text">The Principal personally reviews the matter — assessing the dispute, forum, stage of
+            proceedings and critical timelines before accepting the engagement.</div>
+        </div>
+        <div class="ap-card">
+          <div class="ap-step">02</div>
+          <div class="ap-title">Strategy Formulation</div>
+          <div class="ap-text">A comprehensive litigation strategy is formulated — grounded in analysis of facts,
+            applicable law, procedural requirements and appellate precedents.</div>
+        </div>
+        <div class="ap-card">
+          <div class="ap-step">03</div>
+          <div class="ap-title">Preparation &amp; Drafting</div>
+          <div class="ap-text">Detailed written submissions, grounds of appeal and supporting papers are prepared with
+            direct Principal involvement and review with rigorous attention to accuracy.</div>
+        </div>
+        <div class="ap-card">
+          <div class="ap-step">04</div>
+          <div class="ap-title">Representation &amp; Follow-Through</div>
+          <div class="ap-text">The Principal remains directly involved in hearings, appellate proceedings and client
+            communication throughout the engagement, ensuring continuity, transparency and informed decision-making at
+            every stage.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-band">
+    <div class="container">
+      <div>
+        <h2>Have a Tax Dispute to Discuss?<br /><span>Meetings by Prior Appointment</span></h2>
+        <p>Please provide a brief description of the dispute, the forum involved and the current stage of proceedings.
+        </p>
+      </div>
+      <a href="contact.html" class="btn btn-accent">Contact the Chamber</a>
+    </div>
+  </div>
+
+  <div id="footer-mount"></div>
+  <script src="shared.js"></script>
+</body>
+
+</html>

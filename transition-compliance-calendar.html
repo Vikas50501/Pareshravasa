@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Transition &amp; Compliance Calendar - RAVASA | Shah Paresh & Associates</title>
+  <meta name="description" content="A searchable transition and compliance calendar for the Income-tax Act, 2025." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="topbar-mount"></div>
+  <div id="nav-mount"></div>
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> <span>›</span> <a href="resources.html">Resources</a>
+        <span>›</span> Transition &amp; Compliance Calendar</div>
+      <div class="page-hero-eyebrow">Income-tax Act, 2025</div>
+      <h1>Transition &amp; Compliance Calendar</h1>
+      <p>A searchable reference for transition-related compliance dates, forms and legal touchpoints during the move
+        into the Income-tax Act, 2025 framework.</p>
+    </div>
+  </div>
+
+  <section class="section band-offwhite">
+    <div class="container">
+      <div class="resource-list" style="margin-top:0">
+        <div class="resource-list-item">
+          <div class="resource-tag">Last Updated</div>
+          <div class="resource-title">22 July 2026</div>
+          <p class="resource-text">This calendar reflects the current source file and should be reviewed against any
+            later notifications or amendments before use.</p>
+        </div>
+        <div class="resource-list-item">
+          <div class="resource-tag">Coverage</div>
+          <div class="resource-title">11 transition entries</div>
+          <p class="resource-text">The table covers FY 2025-26 through FY 2026-27 and captures both new-regime and
+            continuing-old-regime dates.</p>
+        </div>
+        <div class="resource-list-item">
+          <div class="resource-tag">Search Tip</div>
+          <div class="resource-title">Filter by any keyword</div>
+          <p class="resource-text">Search by due date, compliance type, section, rule, form, source or practical note
+            to narrow the table instantly.</p>
+        </div>
+      </div>
+
+      <div class="calendar-panel" style="margin-top:28px">
+        <div style="padding:24px 24px 18px">
+          <div class="calendar-toolbar">
+            <div class="calendar-search">
+              <label for="calendarSearch">Search calendar</label>
+              <input id="calendarSearch" type="search"
+                placeholder="Search by date, compliance, form, section, note or source" autocomplete="off" />
+            </div>
+            <div class="calendar-tools">
+              <div class="calendar-count" data-calendar-count>11 entries</div>
+              <button type="button" class="btn btn-outline" data-calendar-clear>Clear Search</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="calendar-wrap">
+          <table class="calendar-table" aria-describedby="calendarSearch">
+            <thead>
+              <tr>
+                <th>Due Date</th>
+                <th>Period</th>
+                <th>Compliance</th>
+                <th>Form</th>
+                <th>Section</th>
+                <th>Rule</th>
+                <th>Applicable To</th>
+                <th>Authority</th>
+                <th>Frequency</th>
+                <th>Governing Law</th>
+                <th>Status</th>
+                <th>Practical Note</th>
+                <th>Litigation Note</th>
+                <th>Source</th>
+              </tr>
+            </thead>
+            <tbody data-calendar-body></tbody>
+          </table>
+        </div>
+
+        <div class="calendar-empty" data-calendar-empty hidden>No rows match your search.</div>
+      </div>
+
+      <div class="calendar-note">
+        <h3>Disclaimer</h3>
+        <p>This calendar is intended as a general reference for transition-related compliances. It does not constitute
+          legal or tax advice. Users should verify the applicable statutory provisions, notifications, rules and due
+          dates before relying on any entry.</p>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-mount"></div>
+  <script src="shared.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const data = [
+        {
+          dueDate: '31 Jul 2026',
+          period: 'Q1 FY 2026-27',
+          compliance: 'TDS/TCS returns',
+          form: 'Forms 138 (salary), 140 (non-salary), 143 (TCS)',
+          section: 'Secs. 1602, 1603, 1620',
+          rule: 'CBDT Rules, 2026',
+          applicableTo: 'Employers, deductors, collectors',
+          authority: 'CBDT',
+          frequency: 'Quarterly',
+          governingLaw: 'Income-tax Act, 2025',
+          status: 'New',
+          practicalNote: 'First TDS return under the new Act',
+          litigationNote: 'Verify applicability of new section references',
+          source: 'CBDT Notification, July 2026'
+        },
+        {
+          dueDate: '31 Jul 2026',
+          period: 'AY 2026-27 (FY 2025-26)',
+          compliance: 'ITR filing (non-audit cases)',
+          form: 'ITR-1 to ITR-7',
+          section: 'IT Act 1961',
+          rule: 'Rule 12',
+          applicableTo: 'All taxpayers (non-audit)',
+          authority: 'CBDT',
+          frequency: 'Annual',
+          governingLaw: 'Income-tax Act, 1961',
+          status: 'Continuing',
+          practicalNote: 'ITR filing continues under the old Act',
+          litigationNote: 'Dual regime confusion likely for taxpayers',
+          source: 'CBDT FAQs, July 2026'
+        },
+        {
+          dueDate: '15 Sep 2026',
+          period: 'TY 2026-27',
+          compliance: 'Advance tax installment',
+          form: 'Challan ITNS 280',
+          section: 'Sec. 210',
+          rule: 'Rule 39',
+          applicableTo: 'Taxpayers with liability > Rs 10,000',
+          authority: 'CBDT',
+          frequency: 'Quarterly',
+          governingLaw: 'Income-tax Act, 2025',
+          status: 'New',
+          practicalNote: 'First advance tax under the new Act',
+          litigationNote: 'Scope of presumptive taxation challenges',
+          source: 'Finance Act 2025'
+        },
+        {
+          dueDate: '30 Sep 2026',
+          period: 'Q2 FY 2026-27',
+          compliance: 'TDS/TCS returns',
+          form: 'Forms 138/140/143',
+          section: 'Secs. 1602, 1603, 1620',
+          rule: 'CBDT Rules, 2026',
+          applicableTo: 'Employers, deductors, collectors',
+          authority: 'CBDT',
+          frequency: 'Quarterly',
+          governingLaw: 'Income-tax Act, 2025',
+          status: 'New',
+          practicalNote: 'Payroll and accounting systems must be updated',
+          litigationNote: 'Litigation on wrong form usage expected',
+          source: 'CBDT Notification'
+        },
+        {
+          dueDate: '31 Oct 2026',
+          period: 'AY 2026-27',
+          compliance: 'Audit report filing',
+          form: 'Form 3CA/3CB + 3CD',
+          section: 'Sec. 44AB',
+          rule: 'Rule 6G',
+          applicableTo: 'Audit-liable taxpayers',
+          authority: 'CBDT',
+          frequency: 'Annual',
+          governingLaw: 'Income-tax Act, 1961',
+          status: 'Continuing',
+          practicalNote: 'Audit reports filed under the old Act',
+          litigationNote: 'Transitional disputes on audit applicability',
+          source: 'IT Act 1961'
+        },
+        {
+          dueDate: '15 Dec 2026',
+          period: 'TY 2026-27',
+          compliance: 'Advance tax installment',
+          form: 'Challan ITNS 280',
+          section: 'Sec. 210',
+          rule: 'Rule 39',
+          applicableTo: 'Taxpayers with liability > Rs 10,000',
+          authority: 'CBDT',
+          frequency: 'Quarterly',
+          governingLaw: 'Income-tax Act, 2025',
+          status: 'New',
+          practicalNote: 'Second installment under the new Act',
+          litigationNote: 'Presumptive taxpayers face hardship',
+          source: 'Finance Act 2025'
+        },
+        {
+          dueDate: '31 Dec 2026',
+          period: 'Q3 FY 2026-27',
+          compliance: 'TDS/TCS returns',
+          form: 'Forms 138/140/143',
+          section: 'Secs. 1602, 1603, 1620',
+          rule: 'CBDT Rules, 2026',
+          applicableTo: 'Employers, deductors, collectors',
+          authority: 'CBDT',
+          frequency: 'Quarterly',
+          governingLaw: 'Income-tax Act, 2025',
+          status: 'New',
+          practicalNote: 'AIS/TIS mismatches likely',
+          litigationNote: 'Litigation on NBFC/HFC interest disclosure',
+          source: 'CBDT Notification'
+        },
+        {
+          dueDate: '31 Jan 2027',
+          period: 'AY 2026-27',
+          compliance: 'Transfer pricing report',
+          form: 'Form 3CEB',
+          section: 'Sec. 92E',
+          rule: 'Rule 10E',
+          applicableTo: 'International transaction taxpayers',
+          authority: 'CBDT',
+          frequency: 'Annual',
+          governingLaw: 'Income-tax Act, 1961',
+          status: 'Continuing',
+          practicalNote: 'TP report continues under the old Act',
+          litigationNote: 'Jurisdictional disputes on AY vs TY',
+          source: 'IT Act 1961'
+        },
+        {
+          dueDate: '15 Mar 2027',
+          period: 'TY 2026-27',
+          compliance: 'Final advance tax installment',
+          form: 'Challan ITNS 280',
+          section: 'Sec. 210',
+          rule: 'Rule 39',
+          applicableTo: 'Taxpayers with liability > Rs 10,000',
+          authority: 'CBDT',
+          frequency: 'Quarterly',
+          governingLaw: 'Income-tax Act, 2025',
+          status: 'New',
+          practicalNote: 'Last installment under the new Act',
+          litigationNote: 'Presumptive taxation litigation intensifies',
+          source: 'Finance Act 2025'
+        },
+        {
+          dueDate: '31 Mar 2027',
+          period: 'Q4 FY 2026-27',
+          compliance: 'TDS/TCS returns',
+          form: 'Forms 138/140/143',
+          section: 'Secs. 1602, 1603, 1620',
+          rule: 'CBDT Rules, 2026',
+          applicableTo: 'Employers, deductors, collectors',
+          authority: 'CBDT',
+          frequency: 'Quarterly',
+          governingLaw: 'Income-tax Act, 2025',
+          status: 'New',
+          practicalNote: 'Ensure correct section codes',
+          litigationNote: 'Appeals on wrong form usage',
+          source: 'CBDT Notification'
+        },
+        {
+          dueDate: '31 Mar 2027',
+          period: 'AY 2026-27',
+          compliance: 'Belated/revised return filing',
+          form: 'ITR forms',
+          section: 'IT Act 1961',
+          rule: 'Rule 12',
+          applicableTo: 'All taxpayers',
+          authority: 'CBDT',
+          frequency: 'Annual',
+          governingLaw: 'Income-tax Act, 1961',
+          status: 'Continuing',
+          practicalNote: 'Last date under the old Act',
+          litigationNote: 'Litigation on belated return validity',
+          source: 'IT Act 1961'
+        }
+      ];
+
+      const tbody = document.querySelector('[data-calendar-body]');
+      const search = document.getElementById('calendarSearch');
+      const clear = document.querySelector('[data-calendar-clear]');
+      const count = document.querySelector('[data-calendar-count]');
+      const empty = document.querySelector('[data-calendar-empty]');
+
+      const escapeHtml = (value) => String(value)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+
+      const statusClass = (status) => status.toLowerCase().replace(/[^a-z]+/g, '-');
+
+      const renderRow = (row) => `
+        <tr class="calendar-row ${statusClass(row.status)}">
+          <td data-label="Due Date">${escapeHtml(row.dueDate)}</td>
+          <td data-label="Period">${escapeHtml(row.period)}</td>
+          <td data-label="Compliance">${escapeHtml(row.compliance)}</td>
+          <td data-label="Form">${escapeHtml(row.form)}</td>
+          <td data-label="Section">${escapeHtml(row.section)}</td>
+          <td data-label="Rule">${escapeHtml(row.rule)}</td>
+          <td data-label="Applicable To">${escapeHtml(row.applicableTo)}</td>
+          <td data-label="Authority">${escapeHtml(row.authority)}</td>
+          <td data-label="Frequency">${escapeHtml(row.frequency)}</td>
+          <td data-label="Governing Law">${escapeHtml(row.governingLaw)}</td>
+          <td data-label="Status"><span class="calendar-chip ${statusClass(row.status)}">${escapeHtml(row.status)}</span></td>
+          <td data-label="Practical Note">${escapeHtml(row.practicalNote)}</td>
+          <td data-label="Litigation Note">${escapeHtml(row.litigationNote)}</td>
+          <td data-label="Source">${escapeHtml(row.source)}</td>
+        </tr>`;
+
+      tbody.innerHTML = data.map(renderRow).join('');
+      const rows = Array.from(tbody.querySelectorAll('tr'));
+      const total = rows.length;
+
+      const updateResults = () => {
+        const query = search.value.trim().toLowerCase();
+        let visible = 0;
+
+        rows.forEach((row) => {
+          const match = !query || row.textContent.toLowerCase().includes(query);
+          row.hidden = !match;
+          if (match) visible += 1;
+        });
+
+        count.textContent = `${visible} of ${total} entries`;
+        empty.hidden = visible !== 0;
+      };
+
+      search.addEventListener('input', updateResults);
+      clear.addEventListener('click', () => {
+        search.value = '';
+        search.focus();
+        updateResults();
+      });
+
+      updateResults();
+    });
+  </script>
+</body>
+
+</html>

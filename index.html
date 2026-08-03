@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>RAVASA — Shah Paresh & Associates | Independent Tax Litigation Chamber</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── HERO ── */
+    .hero {
+      background: var(--navy);
+      padding: 80px 0 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: -10%;
+      right: -5%;
+      width: 420px;
+      height: 420px;
+      background: radial-gradient(circle, rgba(200, 168, 75, 0.09) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero .container {
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 64px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-eyebrow {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--accent2);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      width: 28px;
+      height: 1px;
+      background: var(--accent2);
+    }
+
+    .hero h1 {
+      font-size: clamp(28px, 4vw, 50px);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.18;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: var(--accent2);
+    }
+
+    .hero-sub {
+      font-size: 15px;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.92);
+      line-height: 1.6;
+      max-width: 520px;
+      margin-bottom: 18px;
+    }
+
+    .hero-desc {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.6);
+      line-height: 1.85;
+      max-width: 500px;
+      margin-bottom: 36px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      padding-bottom: 72px;
+    }
+
+    .hero-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      padding-bottom: 72px;
+    }
+
+    .hcard {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(200, 168, 75, 0.2);
+      padding: 18px 22px;
+    }
+
+    .hcard .hc-label {
+      font-size: 9px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent2);
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .hcard .hc-val {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.75);
+      line-height: 1.5;
+    }
+
+    /* ── PAGE PREVIEW SECTIONS ── */
+    .preview {
+      padding: 64px 0;
+    }
+
+    .preview-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      background: var(--border);
+      margin-top: 40px;
+    }
+
+    .preview-card {
+      background: var(--white);
+      padding: 40px 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      transition: background 0.22s;
+    }
+
+    .preview-card:hover {
+      background: var(--cream);
+    }
+
+    .pc-tag {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .pc-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.3;
+    }
+
+    .pc-text {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.75;
+      flex: 1;
+    }
+
+    .pc-link {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--navy);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 2px;
+      display: inline-block;
+      transition: color 0.2s;
+      align-self: flex-start;
+    }
+
+    .pc-link:hover {
+      color: var(--accent);
+    }
+
+    /* ── WHY GRID ── */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px;
+      background: var(--border);
+      margin-top: 40px;
+    }
+
+    .why-card {
+      background: var(--white);
+      padding: 32px 26px;
+      border-top: 3px solid transparent;
+      transition: all 0.22s;
+    }
+
+    .why-card:hover {
+      background: var(--cream);
+      border-top-color: var(--accent);
+    }
+
+    .why-num {
+      font-size: 32px;
+      font-weight: 700;
+      color: rgba(28, 49, 112, 0.09);
+      margin-bottom: 14px;
+    }
+
+    .why-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .why-text {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* ── PRACTICE PILLS ── */
+    .matters-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 40px;
+    }
+
+    .matter-pill {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      border: 1px solid var(--border);
+      transition: all 0.2s;
+    }
+
+    .matter-pill:hover {
+      border-color: var(--navy);
+      background: var(--cream);
+    }
+
+    .matter-pill .arr {
+      font-size: 14px;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .matter-pill p {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+
+    /* ── CONTRIB PREVIEW ── */
+    .contrib-preview {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px;
+      background: var(--border);
+      margin-top: 40px;
+    }
+
+    .cp-card {
+      background: var(--white);
+      padding: 32px 26px;
+    }
+
+    .cp-card:hover {
+      background: var(--cream);
+    }
+
+    .cp-icon {
+      font-size: 24px;
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    .cp-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .cp-text {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    @media(max-width:1024px) {
+      .hero .container {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .hero-cards {
+        display: none;
+      }
+
+      .hero-actions {
+        padding-bottom: 56px;
+      }
+
+      .hero-left {
+        padding: 60px 0 0;
+      }
+
+      .preview-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .matters-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .contrib-preview {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media(max-width:768px) {
+      .hero {
+        padding: 0;
+      }
+
+      .hero-left {
+        padding: 48px 0 0;
+      }
+
+      .hero h1 {
+        font-size: 26px;
+        line-height: 1.2;
+      }
+
+      .hero-desc {
+        font-size: 13px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 48px;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+        text-align: center;
+      }
+
+      .preview-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .matters-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contrib-preview {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media(max-width:480px) {
+      .hero h1 {
+        font-size: 22px;
+      }
+
+      .hero-eyebrow {
+        font-size: 9px;
+      }
+
+      .preview-card {
+        padding: 28px 22px;
+      }
+
+      .why-card {
+        padding: 24px 20px;
+      }
+
+      .cp-card {
+        padding: 24px 20px;
+      }
+    }
+
+    .contact-cta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    @media(max-width:768px) {
+      .contact-cta-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .contact-cta-grid .btn {
+        width: 100%;
+        text-align: center;
+        display: block;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="topbar-mount"></div>
+  <div id="nav-mount"></div>
+
+  <!-- ══ HERO ══════════════════════════════ -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-left">
+        <div class="hero-eyebrow">Independent Tax Litigation Chamber · Mumbai</div>
+        <h1>Focused on Income-Tax<br /><span>and State Tax Appeals</span></h1>
+        <p class="hero-sub">Over 35 years in tax practice, including more than 15 years in tax litigation and appellate
+          representation.</p>
+        <p class="hero-desc">The chamber is focused exclusively on tax litigation, appellate proceedings and tax
+          controversy matters. Independent of routine compliance and audit work, it provides strategic representation in
+          contentious tax matters before tax authorities, appellate forums and tribunals. The practice is built around
+          careful preparation, procedural precision and direct Principal involvement in every matter.</p>
+        <div class="hero-actions">
+          <a href="practice-areas.html" class="btn btn-accent">View Practice Areas</a>
+          <a href="about.html" class="btn btn-outline-white">About the Chamber</a>
+        </div>
+      </div>
+      <div class="hero-cards">
+        <div class="hcard">
+          <div class="hc-label">Chamber</div>
+          <div class="hc-val">Shah Paresh & Associates
+            Independent Tax Litigation Chamber
+            Principal: CA Paresh Shah, FCA</div>
+        </div>
+        <div class="hcard">
+          <div class="hc-label">Practice Focus</div>
+          <div class="hc-val">Income-Tax &amp; Exclusive focus on <br>Income-tax & State tax (now GST) litigation,
+            appeals and tax controversy matters...
+          </div>
+        </div>
+        <div class="hcard">
+          <div class="hc-label">Founded</div>
+          <div class="hc-val">Mumbai, 1987 · 35+ years practice</div>
+        </div>
+        <div class="hcard">
+          <div class="hc-label">Engagement</div>
+          <div class="hc-val">Principal personally involved in every matter<br />By Prior Appointment</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ TICKER ═════════════════════════════ -->
+  <div class="ticker">
+    <div class="ticker-track">
+      <span>Income-Tax Appeals</span><span class="dot">·</span><span>State tax (now GST) Disputes</span><span
+        class="dot">·</span><span class="dot">·</span><span>ITAT
+        Representation</span><span class="dot">·</span><span>CIT(A) Appeals</span><span class="dot">·</span><span>Tax
+        Controversy Strategy</span><span class="dot">·</span><span>Writ Petitions</span><span
+        class="dot">·</span><span>High Court Matters</span><span class="dot">·</span>
+      <span>Income-Tax Appeals</span><span class="dot">·</span><span>State tax (now GST) Disputes</span><span
+        class="dot">·</span><span class="dot">·</span><span>ITAT
+        Representation</span><span class="dot">·</span><span>CIT(A) Appeals</span><span class="dot">·</span><span>Tax
+        Controversy Strategy</span><span class="dot">·</span><span>Writ Petitions</span><span
+        class="dot">·</span><span>High Court Matters</span><span class="dot">·</span>
+    </div>
+  </div>
+
+  <!-- ══ STATS ══════════════════════════════ -->
+  <div class="stat-band">
+    <div class="container">
+      <div class="stat-item">
+        <div class="stat-num">35+</div>
+        <div class="stat-label">Years of Practice</div>
+        <div class="stat-sub">Since 1987, Mumbai</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">1987</div>
+        <div class="stat-label">Founded</div>
+        <div class="stat-sub">Continuous practice</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Tax Focused</div>
+        <div class="stat-sub">No dilution of practice</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">Direct</div>
+        <div class="stat-label">Principal Involvement</div>
+        <div class="stat-sub">Every matter, personally</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ ABOUT PREVIEW ══════════════════════ -->
+  <section class="preview band-offwhite">
+    <div class="container">
+      <div class="eyebrow">About the Chamber</div>
+      <h2 class="section-title">An Independent Chamber<br />Built on Focused Practice</h2>
+      <p class="section-sub">Shah Paresh &amp; Associates is focused exclusively on Income-tax and State tax (now GST)
+        litigation. The chamber does not undertake audit, accounting or general advisory work — ensuring undivided
+        senior attention on every matter.</p>
+      <div class="preview-grid">
+        <div class="preview-card">
+          <span class="pc-tag">Chamber Overview</span>
+          <div class="pc-title">Founded in Mumbai, 1987</div>
+          <p class="pc-text">Over three decades of continuous practice in Income-tax and State tax (now GST) litigation.
+            Every matter is handled personally by the Principal — CA Paresh Shah, Fellow Chartered Accountant.</p>
+          <a href="about.html" class="pc-link">Read More →</a>
+        </div>
+        <div class="preview-card">
+          <span class="pc-tag">Vision &amp; Philosophy</span>
+          <div class="pc-title">Principled. Independent. Focused.</div>
+          <p class="pc-text">To be a trusted independent tax litigation chamber known for principled advocacy,
+            intellectual rigour and effective representation in complex tax disputes.
+            Mission
+            To provide focused, strategic and independent representation in Income-tax, State tax (now GST) and related
+            tax controversy matters, combining technical expertise, procedural precision and direct principal
+            involvement.</p>
+          <a href="about.html" class="pc-link">Explore the Chamber →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ WHY CHOOSE ═════════════════════════ -->
+  <section class="preview">
+    <div class="container">
+      <div class="eyebrow">Why Choose the Chamber</div>
+      <h2 class="section-title">Built on Focus, Depth<br />&amp; Personal Commitment</h2>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-num">01</div>
+          <div class="why-title">Personal Principal Involvement</div>
+          <div class="why-text">Every matter handled directly by CA Paresh Shah. No delegation to juniors or associates
+            — ever.</div>
+        </div>
+        <div class="why-card">
+          <div class="why-num">02</div>
+          <div class="why-title">Exclusive Tax Litigation Focus</div>
+          <div class="why-text">Income-tax and State tax (now GST) litigation only. No audit, accounting or advisory.
+            Undivided specialisation.</div>
+        </div>
+        <div class="why-card">
+          <div class="why-num">03</div>
+          <div class="why-title">Limited Matters Accepted</div>
+          <div class="why-text">The chamber accepts a limited number of matters — ensuring every client gets complete
+            senior attention.</div>
+        </div>
+        <div class="why-card">
+          <div class="why-num">04</div>
+          <div class="why-title">Strategy-Driven Approach</div>
+          <div class="why-text">Built on thorough reading of facts, law and procedure — not templated arguments or
+            routine filings.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PRACTICE AREAS PREVIEW ════════════ -->
+  <section class="preview band-cream">
+    <div class="container">
+      <div class="eyebrow">Practice Areas</div>
+      <h2 class="section-title">Exclusively Income-Tax<br />&amp; State tax (now GST) Litigation</h2>
+      <p class="section-sub">The chamber undertakes matters where specialised appellate strategy and experienced
+        representation make a material difference to the outcome.</p>
+      <div class="matters-grid">
+        <a href="practice-areas.html" class="matter-pill"><span class="arr">→</span>
+          <p>Appeals before CIT(A)</p>
+        </a>
+        <a href="practice-areas.html" class="matter-pill"><span class="arr">→</span>
+          <p>Appeals before ITAT, Mumbai</p>
+        </a>
+        <a href="practice-areas.html" class="matter-pill"><span class="arr">→</span>
+          <p>State tax (now GST) Disputes &amp; Adjudication</p>
+        </a>
+        <a href="practice-areas.html" class="matter-pill"><span class="arr">→</span>
+          <p>Tax Controversy Strategy</p>
+        </a>
+        <a href="practice-areas.html" class="matter-pill"><span class="arr">→</span>
+          <p>Writ Petitions &amp; High Court Matters</p>
+        </a>
+      </div>
+      <div style="margin-top:32px"><a href="practice-areas.html" class="btn btn-navy">View All Practice Areas</a></div>
+    </div>
+  </section>
+
+
+
+  <!-- ══ PUBLICATIONS PREVIEW ══════════════ -->
+  <section class="preview band-offwhite">
+    <div class="container">
+      <div class="eyebrow">Publications &amp; Contributions</div>
+      <h2 class="section-title">Active Contribution to<br />the Tax Profession</h2>
+      <p class="section-sub">Three Decades of Professional Contribution. through technical writing, speaking at
+        professional programmes and leadership in professional associations.
+        Author of articles and commentaries on Income-tax, VAT, State tax (now GST) and related taxation subjects
+        published in professional journals, newspapers and other publications over more than three decades.
+      </p>
+      <div class="contrib-preview">
+        <div class="cp-card">
+          <span class="cp-icon">✍️</span>
+          <div class="cp-title">Technical Writing</div>
+          <div class="cp-text">Articles and commentaries on Income-tax and State tax (now GST) published in professional
+            journals and newspapers.</div>
+        </div>
+        <div class="cp-card">
+          <span class="cp-icon">🎙️</span>
+          <div class="cp-title">Speaking Engagements</div>
+          <div class="cp-text">Speaker at WIRC of ICAI programmes on LLP, VAT, Non-Profit Entities and Forensic
+            Accounting.</div>
+        </div>
+        <div class="cp-card">
+          <span class="cp-icon">🏛️</span>
+          <div class="cp-title">Professional Associations</div>
+          <div class="cp-text">Co-Founder, Jain CA Federation Mumbai. Chief Co-ordinator, First National Conference of
+            Jain CAs (2006).</div>
+        </div>
+        <div class="cp-card">
+          <span class="cp-icon">⚖️</span>
+          <div class="cp-title">Committee Participation</div>
+          <div class="cp-text">Co-opted Member &amp; Group Member, Public Relations Committee, WIRC of ICAI (2006–2007).
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:32px"><a href="contributions.html" class="btn btn-navy">View All Contributions</a></div>
+    </div>
+  </section>
+
+  <!-- ══ CONTACT CTA ════════════════════════ -->
+  <section class="preview band-navy" style="padding:64px 0">
+    <div class="container">
+      <div class="contact-cta-grid">
+        <div>
+          <div class="eyebrow eyebrow-white">Contact &amp; Appointments</div>
+          <h2 class="section-title section-title-white">Enquire About<br />Your Matter</h2>
+          <p style="font-size:13px;color:rgba(255,255,255,0.55);line-height:1.8;margin-top:8px">The chamber accepts a
+            limited number of matters. Please provide a brief description of the dispute, the forum involved and the
+            current stage of proceedings when reaching out.</p>
+          <div style="margin-top:28px;display:flex;gap:14px;flex-wrap:wrap">
+            <a href="contact.html" class="btn btn-accent">Contact the Chamber</a>
+            <a href="contact.html" class="btn btn-outline-white">View Contact Details</a>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:2px">
+          <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(200,168,75,0.25);padding:18px 22px">
+            <div
+              style="font-size:9px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent2);margin-bottom:5px">
+              Location</div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.75)">Mumbai, Maharashtra, India</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(200,168,75,0.25);padding:18px 22px">
+            <div
+              style="font-size:9px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent2);margin-bottom:5px">
+              LinkedIn</div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.75)">
+              <a href="https://www.linkedin.com/in/pareshravasa" style="color:rgba(255,255,255,0.75)">
+                Visit our LinkedIn Profile
+              </a>
+            </div>
+
+          </div>
+          <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(200,168,75,0.25);padding:18px 22px">
+            <div
+              style="font-size:9px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent2);margin-bottom:5px">
+              Meetings</div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.75)">By Prior Appointment</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="preview band-cream">
+    <div class="container">
+      <div class="eyebrow">Insights</div>
+      <h2 class="section-title">Hexaware and Retrospective Validation: Emerging Constitutional Issues</h2>
+      <p class="section-sub">The reassessment debate now turns on retrospective validation and constitutional review.</p>
+      <div class="blog-home-grid">
+        <article class="blog-feature-card">
+          <a href="blog-insight-2.html" class="blog-feature-media" aria-label="Open Tax Litigation Insight No - 2">
+            <img src="assets/blog-cover.svg" alt="Abstract cover for Tax Litigation Insight No - 2" />
+          </a>
+          <div class="blog-feature-content">
+            <div class="blog-kicker">Tax Litigation Insight No - 2</div>
+            <div class="blog-meta">
+              <span>Tax Litigation Insights</span>
+              <span>Published on 20 July 2026</span>
+              <span>5 min read</span>
+            </div>
+            <h3 class="blog-feature-title">Hexaware and Retrospective Validation: Emerging Constitutional Issues</h3>
+            <p class="blog-feature-text">The article explains how the reassessment dispute shifted from procedural
+              compliance into a broader constitutional challenge after Section 147A.</p>
+            <a href="blog-insight-2.html" class="btn btn-navy">Read More</a>
+          </div>
+        </article>
+        <aside class="blog-home-aside">
+          <div class="mini-row">
+            <div class="mini-label">Author</div>
+            <div class="mini-value">By CA Paresh Shah (Ravasa)</div>
+          </div>
+          <div class="mini-row">
+            <div class="mini-label">Principal</div>
+            <div class="mini-value">Shah Paresh &amp; Associates</div>
+          </div>
+          <div class="mini-row">
+            <div class="mini-label">Reading Time</div>
+            <div class="mini-value">5 minutes</div>
+          </div>
+          <div class="mini-row">
+            <div class="mini-label">Archive</div>
+            <div class="mini-value"><a href="insights.html" class="btn btn-outline-white" style="margin-top:10px">View All
+                Insights</a></div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-mount"></div>
+  <script src="shared.js"></script>
+</body>
+
+</html>
