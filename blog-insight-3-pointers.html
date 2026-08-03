@@ -215,33 +215,6 @@
       color: var(--body-text);
     }
 
-    .summary-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-      margin-top: 24px;
-    }
-
-    .summary-tile {
-      padding: 18px 18px 17px;
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.16);
-    }
-
-    .summary-tile .k {
-      font-size: 9px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.6);
-      margin-bottom: 6px;
-    }
-
-    .summary-tile .v {
-      font-size: 13px;
-      line-height: 1.7;
-      color: rgba(255, 255, 255, 0.92);
-    }
-
     .series-note {
       margin-top: 20px;
       padding: 16px 18px;
@@ -282,9 +255,6 @@
         position: static;
       }
 
-      .summary-grid {
-        grid-template-columns: 1fr;
-      }
     }
 
     @media (max-width: 768px) {
@@ -339,20 +309,6 @@
         reference.
       </p>
 
-      <div class="summary-grid">
-        <div class="summary-tile">
-          <div class="k">Focus</div>
-          <div class="v">Full chapter text with the reference box placed in the middle of the sequence.</div>
-        </div>
-        <div class="summary-tile">
-          <div class="k">Use</div>
-          <div class="v">Built for readers who want the complete article, not just a summary.</div>
-        </div>
-        <div class="summary-tile">
-          <div class="k">Format</div>
-          <div class="v">Long-form block layout with chapter sections, highlights and a closing note.</div>
-        </div>
-      </div>
     </div>
   </section>
 
