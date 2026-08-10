@@ -23,7 +23,7 @@ function renderTopbar() {
 function renderNav() {
   const page = getPage();
   const isInsightsPage = page === 'insights.html' || page === 'blog.html' || page.startsWith('blog-') || page.startsWith('insight-');
-  const isResourcesPage = page === 'resources.html' || page === 'transition-compliance-calendar.html';
+  const isResourcesPage = page === 'resources.html' || page === 'transition-compliance-calendar.html' || page === 'lic-library.html';
   const links = [
     { href: 'index.html', label: 'Home' },
     { href: 'about.html', label: 'About' },
