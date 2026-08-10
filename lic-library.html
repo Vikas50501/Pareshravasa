@@ -12,6 +12,101 @@
       color: var(--navy);
       font-size: 10px;
     }
+
+    .lic-card .blog-card-media {
+      background: #f5f7fc;
+      cursor: zoom-in;
+      aspect-ratio: 1 / 1;
+    }
+
+    .lic-card .blog-card-media img {
+      object-fit: contain;
+      background: #f5f7fc;
+      padding: 10px;
+    }
+
+    .lic-card .blog-card-media::after {
+      display: none;
+    }
+
+    .lic-lightbox {
+      position: fixed;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(15, 23, 42, 0.74);
+      backdrop-filter: blur(10px);
+      z-index: 9999;
+    }
+
+    .lic-lightbox.open {
+      display: flex;
+    }
+
+    .lic-lightbox-panel {
+      width: min(1200px, 96vw);
+      max-height: 92vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      position: relative;
+    }
+
+    .lic-lightbox-close {
+      position: absolute;
+      top: -14px;
+      right: -14px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      background: #fff;
+      color: var(--navy);
+      font-size: 24px;
+      line-height: 1;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.18);
+      z-index: 2;
+    }
+
+    .lic-lightbox-stage {
+      width: 100%;
+      max-height: 92vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: transparent;
+    }
+
+    .lic-lightbox-image {
+      max-width: 96vw;
+      max-height: 90vh;
+      width: auto;
+      height: auto;
+      display: block;
+      user-select: none;
+      -webkit-user-drag: none;
+      box-shadow: 0 20px 60px rgba(15, 23, 42, 0.28);
+      opacity: 0;
+      transition: opacity 0.18s ease;
+    }
+
+    html.lic-lightbox-lock,
+    body.lic-lightbox-lock {
+      overflow: hidden;
+      height: 100%;
+    }
+
+    body.lic-lightbox-lock {
+      position: fixed;
+      left: 0;
+      right: 0;
+      width: 100%;
+    }
   </style>
 </head>
 
@@ -49,9 +144,8 @@
 
         <div class="lic-grid">
           <article class="blog-card lic-card">
-            <a href="assets/lic/lic-1-1.svg" class="blog-card-media" target="_blank" rel="noopener"
-              aria-label="Open LIC 1.1 preview">
-              <img src="assets/lic/lic-1-1.svg" alt="LIC 1.1 for Tax Litigation Insight No - 1" />
+            <a href="assets/lic/LIC 1.1.jpeg" class="blog-card-media lic-preview" aria-label="Open LIC 1.1 preview">
+              <img src="assets/lic/LIC 1.1.jpeg" alt="LIC 1.1 for Tax Litigation Insight No - 1" />
             </a>
             <div class="blog-card-body">
               <div class="lic-chip-row">
@@ -66,9 +160,8 @@
           </article>
 
           <article class="blog-card lic-card">
-            <a href="assets/lic/lic-1-2.svg" class="blog-card-media" target="_blank" rel="noopener"
-              aria-label="Open LIC 1.2 preview">
-              <img src="assets/lic/lic-1-2.svg" alt="LIC 1.2 for Tax Litigation Insight No - 1" />
+            <a href="assets/lic/LIC 1.2.jpeg" class="blog-card-media lic-preview" aria-label="Open LIC 1.2 preview">
+              <img src="assets/lic/LIC 1.2.jpeg" alt="LIC 1.2 for Tax Litigation Insight No - 1" />
             </a>
             <div class="blog-card-body">
               <div class="lic-chip-row">
@@ -83,9 +176,8 @@
           </article>
 
           <article class="blog-card lic-card">
-            <a href="assets/lic/lic-1-3.svg" class="blog-card-media" target="_blank" rel="noopener"
-              aria-label="Open LIC 1.3 preview">
-              <img src="assets/lic/lic-1-3.svg" alt="LIC 1.3 for Tax Litigation Insight No - 1" />
+            <a href="assets/lic/LIC 1.3.jpeg" class="blog-card-media lic-preview" aria-label="Open LIC 1.3 preview">
+              <img src="assets/lic/LIC 1.3.jpeg" alt="LIC 1.3 for Tax Litigation Insight No - 1" />
             </a>
             <div class="blog-card-body">
               <div class="lic-chip-row">
@@ -100,9 +192,8 @@
           </article>
 
           <article class="blog-card lic-card">
-            <a href="assets/lic/lic-1-4.svg" class="blog-card-media" target="_blank" rel="noopener"
-              aria-label="Open LIC 1.4 preview">
-              <img src="assets/lic/lic-1-4.svg" alt="LIC 1.4 for Tax Litigation Insight No - 1" />
+            <a href="assets/lic/LIC 1.4.jpeg" class="blog-card-media lic-preview" aria-label="Open LIC 1.4 preview">
+              <img src="assets/lic/LIC 1.4.jpeg" alt="LIC 1.4 for Tax Litigation Insight No - 1" />
             </a>
             <div class="blog-card-body">
               <div class="lic-chip-row">
@@ -117,9 +208,8 @@
           </article>
 
           <article class="blog-card lic-card">
-            <a href="assets/lic/lic-1-5.svg" class="blog-card-media" target="_blank" rel="noopener"
-              aria-label="Open LIC 1.5 preview">
-              <img src="assets/lic/lic-1-5.svg" alt="LIC 1.5 for Tax Litigation Insight No - 1" />
+            <a href="assets/lic/LIC 1.5.jpeg" class="blog-card-media lic-preview" aria-label="Open LIC 1.5 preview">
+              <img src="assets/lic/LIC 1.5.jpeg" alt="LIC 1.5 for Tax Litigation Insight No - 1" />
             </a>
             <div class="blog-card-body">
               <div class="lic-chip-row">
@@ -134,9 +224,8 @@
           </article>
 
           <article class="blog-card lic-card">
-            <a href="assets/lic/lic-1-6.svg" class="blog-card-media" target="_blank" rel="noopener"
-              aria-label="Open LIC 1.6 preview">
-              <img src="assets/lic/lic-1-6.svg" alt="LIC 1.6 for Tax Litigation Insight No - 1" />
+            <a href="assets/lic/LIC 1.6.jpeg" class="blog-card-media lic-preview" aria-label="Open LIC 1.6 preview">
+              <img src="assets/lic/LIC 1.6.jpeg" alt="LIC 1.6 for Tax Litigation Insight No - 1" />
             </a>
             <div class="blog-card-body">
               <div class="lic-chip-row">
@@ -184,7 +273,84 @@
   </section>
 
   <div id="footer-mount"></div>
+  <div class="lic-lightbox" id="licLightbox" aria-hidden="true">
+    <div class="lic-lightbox-panel" role="dialog" aria-modal="true" aria-label="LIC preview">
+      <button type="button" class="lic-lightbox-close" id="licLightboxClose" aria-label="Close preview">&times;</button>
+      <div class="lic-lightbox-stage">
+        <img class="lic-lightbox-image" id="licLightboxImage" alt="" />
+      </div>
+    </div>
+  </div>
   <script src="shared.js"></script>
+  <script>
+    (function () {
+      const lightbox = document.getElementById('licLightbox');
+      const lightboxImage = document.getElementById('licLightboxImage');
+      const closeButton = document.getElementById('licLightboxClose');
+      const html = document.documentElement;
+      const body = document.body;
+      const previews = document.querySelectorAll('.lic-preview');
+      let lockedScrollY = 0;
+
+      function lockScroll() {
+        lockedScrollY = window.scrollY || window.pageYOffset || 0;
+        html.classList.add('lic-lightbox-lock');
+        body.classList.add('lic-lightbox-lock');
+        body.style.top = `-${lockedScrollY}px`;
+      }
+
+      function unlockScroll() {
+        html.classList.remove('lic-lightbox-lock');
+        body.classList.remove('lic-lightbox-lock');
+        body.style.top = '';
+        window.scrollTo(0, lockedScrollY);
+      }
+
+      function openLightbox(src, alt) {
+        lightboxImage.alt = alt || 'LIC preview';
+        lightboxImage.style.opacity = '0';
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        lockScroll();
+        lightboxImage.src = src;
+        lightboxImage.onload = () => {
+          lightboxImage.style.opacity = '1';
+          closeButton.focus();
+        };
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('open');
+        lightbox.setAttribute('aria-hidden', 'true');
+        unlockScroll();
+        lightboxImage.removeAttribute('src');
+        lightboxImage.style.opacity = '0';
+      }
+
+      previews.forEach((preview) => {
+        preview.addEventListener('click', (event) => {
+          event.preventDefault();
+          const img = preview.querySelector('img');
+          openLightbox(preview.getAttribute('href'), img ? img.alt : preview.getAttribute('aria-label'));
+        });
+      });
+
+      closeButton.addEventListener('click', closeLightbox);
+
+      lightbox.addEventListener('click', (event) => {
+        if (event.target === lightbox) {
+          closeLightbox();
+        }
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (!lightbox.classList.contains('open')) return;
+        if (event.key === 'Escape') {
+          closeLightbox();
+        }
+      });
+    })();
+  </script>
 </body>
 
 </html>
