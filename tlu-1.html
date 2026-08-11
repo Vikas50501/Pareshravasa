@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>TLU&ndash;1 Taxation and Other Laws (Amendment) Bill, 2026 | RAVASA</title>
+  <meta name="description" content="A pointer-style article view of TLU-1 for easier reading and quick reference." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background:
+        radial-gradient(circle at top right, rgba(200, 168, 75, 0.12), transparent 30%),
+        linear-gradient(180deg, #f8fafc 0%, #ffffff 24%, #ffffff 100%);
+    }
+
+    .pointer-hero {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #182a60 0%, #1c3170 42%, #0f1a3f 100%);
+      color: #fff;
+      padding: 82px 0 72px;
+    }
+
+    .pointer-hero::before {
+      content: "";
+      position: absolute;
+      inset: auto -8% -30% auto;
+      width: 360px;
+      height: 360px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232, 201, 106, 0.24) 0%, rgba(232, 201, 106, 0) 70%);
+      pointer-events: none;
+    }
+
+    .hero-row {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .hero-transition {
+      font-size: 13px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.72);
+      white-space: nowrap;
+    }
+
+    .pointer-shell {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 340px;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .pointer-card {
+      background: #fff;
+      border: 1px solid rgba(28, 49, 112, 0.12);
+      box-shadow: 0 12px 28px rgba(28, 49, 112, 0.06);
+    }
+
+    .pointer-card + .pointer-card {
+      margin-top: 18px;
+    }
+
+    .pointer-card-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 22px 24px;
+      border-bottom: 1px solid rgba(28, 49, 112, 0.08);
+      background: linear-gradient(90deg, rgba(28, 49, 112, 0.04), rgba(255, 255, 255, 0));
+    }
+
+    .pointer-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(28, 49, 112, 0.08);
+      color: var(--navy);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .pointer-badge::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(200, 168, 75, 0.16);
+    }
+
+    .pointer-section {
+      padding: 28px 28px 30px;
+    }
+
+    .pointer-section h2,
+    .pointer-side h3 {
+      color: var(--navy);
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    .pointer-section h2 {
+      font-size: 22px;
+      margin-top: 34px;
+    }
+
+    .pointer-section h2:first-child {
+      margin-top: 0;
+    }
+
+    .pointer-section p,
+    .pointer-section li,
+    .pointer-side p {
+      font-size: 13px;
+      line-height: 1.9;
+      color: var(--body-text);
+    }
+
+    .pointer-list {
+      display: grid;
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .pointer-item {
+      display: grid;
+      grid-template-columns: 48px minmax(0, 1fr);
+      gap: 16px;
+      align-items: start;
+      padding: 18px 18px 18px 16px;
+      background: linear-gradient(180deg, rgba(28, 49, 112, 0.03), rgba(255, 255, 255, 1));
+      border: 1px solid rgba(28, 49, 112, 0.08);
+      border-left: 4px solid var(--accent);
+    }
+
+    .pointer-num {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--navy);
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+      box-shadow: inset 0 -2px 0 rgba(255, 255, 255, 0.12);
+    }
+
+    .pointer-item h4 {
+      font-size: 14px;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+
+    .pointer-item ul {
+      margin-left: 18px;
+    }
+
+    .pointer-item li {
+      margin-bottom: 6px;
+    }
+
+    .reference-shell {
+      background: linear-gradient(180deg, rgba(200, 168, 75, 0.12), rgba(255, 255, 255, 1));
+      border: 1px solid rgba(200, 168, 75, 0.34);
+      box-shadow: 0 16px 36px rgba(28, 49, 112, 0.08);
+    }
+
+    .pointer-side {
+      position: sticky;
+      top: 112px;
+      align-self: start;
+    }
+
+    .reference-shell .pointer-card-head {
+      background: linear-gradient(90deg, rgba(200, 168, 75, 0.18), rgba(255, 255, 255, 0));
+    }
+
+    .reference-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .reference-pill {
+      padding: 14px 14px 14px 16px;
+      border: 1px solid rgba(28, 49, 112, 0.1);
+      background: rgba(255, 255, 255, 0.78);
+    }
+
+    .reference-pill a {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .reference-pill:hover {
+      background: rgba(255, 255, 255, 0.96);
+      border-color: rgba(28, 49, 112, 0.18);
+    }
+
+    .reference-pill.is-active {
+      background: rgba(28, 49, 112, 0.08);
+      border-color: rgba(28, 49, 112, 0.26);
+      box-shadow: inset 0 0 0 1px rgba(28, 49, 112, 0.04);
+    }
+
+    .reference-pill strong {
+      display: block;
+      color: var(--navy);
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+
+    .reference-pill span {
+      display: block;
+      font-size: 12px;
+      line-height: 1.65;
+      color: var(--body-text);
+    }
+
+    .series-note {
+      margin-top: 20px;
+      padding: 16px 18px;
+      border-left: 4px solid var(--accent);
+      background: rgba(200, 168, 75, 0.08);
+      color: var(--navy);
+      font-size: 13px;
+      line-height: 1.8;
+      font-weight: 600;
+    }
+
+    .chapter-panel {
+      display: none;
+    }
+
+    .chapter-panel.is-active {
+      display: block;
+    }
+
+    .chapter-panel h2 {
+      margin-top: 0;
+    }
+
+    .chapter-panel .series-note {
+      margin-top: 24px;
+    }
+
+    @media (max-width: 1024px) {
+      .pointer-shell {
+        grid-template-columns: 1fr;
+      }
+
+      .pointer-side {
+        position: static;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .pointer-hero {
+        padding: 56px 0 48px;
+      }
+
+      .hero-row {
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .hero-transition {
+        white-space: normal;
+        line-height: 1.5;
+      }
+
+      .pointer-shell {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .pointer-side {
+        order: -1;
+      }
+
+      .pointer-section,
+      .pointer-card-head {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .pointer-item {
+        grid-template-columns: 40px minmax(0, 1fr);
+      }
+
+      .pointer-num {
+        width: 40px;
+        height: 40px;
+      }
+
+      .pointer-section {
+        padding-top: 22px;
+        padding-bottom: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="topbar-mount"></div>
+  <div id="nav-mount"></div>
+
+  <section class="pointer-hero">
+    <div class="container">
+      <div class="hero-row">
+        <div class="pointer-badge" style="color:#ffffff;background:rgba(255,255,255,0.12)">TLU&ndash;1</div>
+        <div class="hero-transition">Recent Legislative Development | August 2026</div>
+      </div>
+      <h1 style="font-size:clamp(30px,4vw,54px);line-height:1.12;margin:18px 0 16px;max-width:920px">
+        Taxation and Other Laws (Amendment) Bill, 2026
+      </h1>
+      <p style="font-size:15px;line-height:1.85;max-width:900px;color:rgba(255,255,255,0.82);margin:0">
+        A Tax Litigation Perspective
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="pointer-shell">
+        <article>
+          <div class="pointer-card">
+            <div class="pointer-card-head">
+              <div>
+                <div class="blog-kicker" style="color:var(--navy);font-size:10px">Full Article View</div>
+                <h2 id="activeChapterTitle" style="font-size:22px;color:var(--navy);margin-top:4px">Overview</h2>
+              </div>
+              <div class="pointer-badge">Long Form</div>
+            </div>
+            <div class="pointer-section">
+              <p style="margin:0 0 18px">Select a section from the right to view that section only. The page uses the same pointer-style reading pattern as the repeal and saving article.</p>
+
+              <div class="chapter-panel is-active" data-chapter-panel="overview">
+                <h2>Overview</h2>
+                <p>This Tax Litigation Update examines the Taxation and Other Laws (Amendment) Bill, 2026 from a litigation perspective, with particular attention to statutory conditions, classification issues and transitional provisions that may shape future disputes.</p>
+                <p>Recent Legislative Development | August 2026</p>
+                <p>The Taxation and Other Laws (Amendment) Bill, 2026 seeks to introduce a range of changes relating to taxation, foreign investment, electronics manufacturing and digital payments. It also seeks to replace the earlier Income-tax (Amendment) Ordinance, 2026. The Lok Sabha passed the Bill on 6 August 2026.</p>
+                <p>The Economic Times</p>
+                <p>From a tax litigation perspective, however, the significance of the proposed changes extends beyond the immediate tax or business incentives.</p>
+                <p>The more relevant question is:</p>
+                <p>Does greater statutory precision reduce litigation - or merely change the nature of the disputes that reach the courts?</p>
+                <p>Three areas merit particular attention.</p>
+              </div>
+
+              <div class="chapter-panel" data-chapter-panel="funds">
+                <h2>1. Offshore Investment Funds - From Broad Tests to Defined Conditions</h2>
+                <p>The proposed amendments seek to liberalise the conditions applicable to eligible investment funds under the Income-tax Act.</p>
+                <p>The earlier framework contained several detailed conditions relating to participation, investment concentration and other eligibility requirements. The proposed changes seek to simplify or modify these conditions with the stated objective of making India more attractive for global fund management.</p>
+                <p>The Times of India +1</p>
+                <p>Litigation perspective</p>
+                <p>A framework based on more objectively stated statutory conditions may reduce disputes arising from broad or subjective assessments of the manner in which an offshore fund is structured or operated.</p>
+                <p>But litigation does not necessarily disappear.</p>
+                <p>The focus may shift towards questions such as:</p>
+                <ul>
+                  <li>whether the prescribed statutory conditions have actually been satisfied;</li>
+                  <li>the manner in which participation or investment is computed;</li>
+                  <li>interpretation of defined expressions;</li>
+                  <li>treatment of associated entities; and</li>
+                  <li>whether the factual structure of a fund falls within the statutory safe harbour.</li>
+                </ul>
+                <p>The likely consequence is not the disappearance of litigation, but a possible movement from broad "substance" disputes towards disputes over the precise application of statutory conditions.</p>
+              </div>
+
+              <div class="chapter-panel" data-chapter-panel="digital">
+                <h2>2. Digital Payments and MDR - Statutory Framework Rather Than a Blanket Position</h2>
+                <p>The Bill also proposes amendments concerning charges relating to specified digital payment transactions.</p>
+                <p>This is important from a legal perspective because the question is no longer merely whether a particular charge is commercially or administratively desirable. The legislation seeks to provide a statutory framework within which the Government may prescribe the applicable position.</p>
+                <p>Litigation perspective</p>
+                <p>The distinction between:</p>
+                <p>a statutory power to regulate or prescribe charges</p>
+                <p>and</p>
+                <p>the actual exercise of that power through a notification or subordinate legislation</p>
+                <p>will remain important.</p>
+                <p>Consequently, future disputes may concern:</p>
+                <ul>
+                  <li>the scope of the delegated power;</li>
+                  <li>the validity of notifications issued under it;</li>
+                  <li>classification of transactions;</li>
+                  <li>differential treatment of categories of transactions; and</li>
+                  <li>the extent to which the delegated legislation remains within the authority conferred by Parliament.</li>
+                </ul>
+                <p>Thus, legislative authorisation does not necessarily eliminate constitutional or administrative-law questions. It may instead move the litigation to the next stage of the statutory framework.</p>
+              </div>
+
+              <div class="chapter-panel" data-chapter-panel="electronics">
+                <h2>3. Electronics Manufacturing - Classification May Become the Litigation Frontier</h2>
+                <p>The proposed amendments provide significant tax incentives for specified electronics manufacturing activities, including an extended period of tax benefit for qualifying activities.</p>
+                <p>The practical importance of such incentives will depend substantially upon the statutory definitions and eligibility conditions.</p>
+                <p>Litigation perspective</p>
+                <p>Where a tax incentive depends upon whether a particular product, component, machinery or activity falls within a defined statutory category, disputes may arise at the boundary.</p>
+                <p>Questions of classification can become particularly significant where:</p>
+                <ul>
+                  <li>imported components are used;</li>
+                  <li>a product contains multiple categories of parts;</li>
+                  <li>manufacturing and assembly activities overlap; or</li>
+                  <li>the taxpayer's activity does not fit neatly within the statutory description.</li>
+                </ul>
+                <p>The litigation may therefore move away from the broad question "Is the taxpayer eligible for the incentive?" to the narrower but decisive question:</p>
+                <p>"Does the particular activity or component satisfy the precise statutory definition?"</p>
+              </div>
+
+              <div class="chapter-panel" data-chapter-panel="transition">
+                <h2>4. The Transitional Question - Ordinance to Legislation</h2>
+                <p>Perhaps the most immediate litigation issue is transitional.</p>
+                <p>The Bill seeks to replace the Income-tax (Amendment) Ordinance, 2026. The existence of an Ordinance followed by legislation raises familiar but important questions concerning the legal effect of actions taken during the intervening period and the manner in which the enacted provisions operate in relation to those actions.</p>
+                <p>The precise commencement, saving and validating provisions therefore require careful examination.</p>
+                <p>For practitioners, the chronology should be mapped:</p>
+                <p>Ordinance -> actions/notices/orders -> Bill -> enacted legislation -> commencement/saving provisions</p>
+                <p>The mere replacement of an Ordinance by an Act does not, by itself, answer every question concerning acts already undertaken under the Ordinance.</p>
+              </div>
+
+              <div class="chapter-panel" data-chapter-panel="lesson">
+                <h2>5. The Broader Litigation Lesson</h2>
+                <p>Tax legislation often seeks to reduce litigation by replacing uncertainty with clearer statutory boundaries.</p>
+                <p>That objective is understandable.</p>
+                <p>But from a litigation perspective, clarity in the statute does not necessarily mean the end of litigation.</p>
+                <p>It may instead change the character of the dispute:</p>
+                <p>From interpretation of broad principles -> to application of precise statutory conditions.</p>
+                <p>The next generation of disputes may therefore concentrate on:</p>
+                <p>definitions • classification • eligibility conditions • delegated legislation • commencement • saving provisions • transitional rights</p>
+                <p>For practitioners, this makes the transitional and definitional provisions of the amendment as important as the headline tax concessions themselves.</p>
+              </div>
+
+              <div class="pointer-card" style="margin-top:24px">
+                <div class="pointer-card-head">
+                  <div>
+                    <div class="blog-kicker" style="color:var(--navy);font-size:10px">Practitioner's Takeaway</div>
+                    <h3 style="font-size:18px;color:var(--navy);margin-top:4px">What to ask first</h3>
+                  </div>
+                  <div class="pointer-badge">Key Point</div>
+                </div>
+                <div class="pointer-section">
+                  <p>When examining the Taxation and Other Laws (Amendment) Bill, 2026, the first question should not simply be:</p>
+                  <p>"What tax benefit has been introduced?"</p>
+                  <p>It should also be:</p>
+                  <p>"What new statutory conditions determine eligibility, and what happens to actions taken under the earlier legal framework?"</p>
+                  <p>That is where the potential litigation impact of the amendment deserves closer examination.</p>
+                  <p>This note is intended as a practitioner-focused preliminary analysis of the legislative development. The final statutory text, commencement provisions, notifications and subsequent judicial or administrative interpretation should be examined before relying upon any particular provision.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <aside class="pointer-side">
+          <div class="pointer-card reference-shell">
+            <div class="pointer-card-head">
+              <div>
+                <div class="blog-kicker" style="color:var(--navy);font-size:10px">Reading Map</div>
+                <h3 style="font-size:18px;color:var(--navy);margin-top:4px">Jump to a section</h3>
+              </div>
+              <div class="pointer-badge">Quick Links</div>
+            </div>
+            <div class="pointer-section">
+              <div class="reference-list">
+                <div class="reference-pill is-active"><a href="#overview" data-chapter="overview"><strong>Overview</strong><span>Intro and legislative framing.</span></a></div>
+                <div class="reference-pill"><a href="#funds" data-chapter="funds"><strong>1. Offshore Funds</strong><span>Broad tests to defined conditions.</span></a></div>
+                <div class="reference-pill"><a href="#digital" data-chapter="digital"><strong>2. Digital Payments</strong><span>Statutory framework and delegation.</span></a></div>
+                <div class="reference-pill"><a href="#electronics" data-chapter="electronics"><strong>3. Electronics Manufacturing</strong><span>Classification as the litigation frontier.</span></a></div>
+                <div class="reference-pill"><a href="#transition" data-chapter="transition"><strong>4. Transitional Question</strong><span>Ordinance to legislation.</span></a></div>
+                <div class="reference-pill"><a href="#lesson" data-chapter="lesson"><strong>5. Broader Lesson</strong><span>How precision changes disputes.</span></a></div>
+              </div>
+              <div style="margin-top:22px;padding-top:20px;border-top:1px solid rgba(28,49,112,0.12)">
+                <p style="font-weight:700;color:var(--navy);margin-bottom:8px">Article note</p>
+                <p>Select a section to display only that section on the left, matching the pointer-style behavior used elsewhere on the site.</p>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-mount"></div>
+  <script src="shared.js"></script>
+  <script>
+    (() => {
+      const title = document.getElementById('activeChapterTitle');
+      const panels = Array.from(document.querySelectorAll('[data-chapter-panel]'));
+      const links = Array.from(document.querySelectorAll('[data-chapter]'));
+      const titleMap = {
+        overview: 'Overview',
+        funds: '1. Offshore Investment Funds - From Broad Tests to Defined Conditions',
+        digital: '2. Digital Payments and MDR - Statutory Framework Rather Than a Blanket Position',
+        electronics: '3. Electronics Manufacturing - Classification May Become the Litigation Frontier',
+        transition: '4. The Transitional Question - Ordinance to Legislation',
+        lesson: '5. The Broader Litigation Lesson',
+      };
+
+      function setActive(chapter) {
+        const target = chapter || 'overview';
+        panels.forEach(panel => {
+          panel.classList.toggle('is-active', panel.getAttribute('data-chapter-panel') === target);
+        });
+        links.forEach(link => {
+          const pill = link.closest('.reference-pill');
+          const active = link.getAttribute('data-chapter') === target;
+          if (pill) pill.classList.toggle('is-active', active);
+        });
+        if (title) title.textContent = titleMap[target] || titleMap.overview;
+      }
+
+      links.forEach(link => {
+        link.addEventListener('click', event => {
+          event.preventDefault();
+          const chapter = link.getAttribute('data-chapter');
+          setActive(chapter);
+          history.replaceState(null, '', `#${chapter}`);
+        });
+      });
+
+      const start = (location.hash || '#overview').replace('#', '');
+      setActive(titleMap[start] ? start : 'overview');
+
+      window.addEventListener('hashchange', () => {
+        const next = (location.hash || '#overview').replace('#', '');
+        setActive(titleMap[next] ? next : 'overview');
+      });
+    })();
+  </script>
+</body>
+
+</html>

@@ -24,6 +24,7 @@ function renderNav() {
   const page = getPage();
   const isInsightsPage = page === 'insights.html' || page === 'blog.html' || page.startsWith('blog-') || page.startsWith('insight-');
   const isResourcesPage = page === 'resources.html' || page === 'transition-compliance-calendar.html' || page === 'lic-library.html';
+  const isTluPage = page === 'tlu.html' || page === 'tlu-1.html';
   const links = [
     { href: 'index.html', label: 'Home' },
     { href: 'about.html', label: 'About' },
@@ -31,10 +32,11 @@ function renderNav() {
     { href: 'contributions.html', label: 'Publications' },
     { href: 'insights.html', label: 'Insights' },
     { href: 'resources.html', label: 'Resources' },
+    { href: 'tlu.html', label: 'TLU' },
     { href: 'contact.html', label: 'Contact' },
   ];
   const navLinks = links.map(l =>
-    `<a href="${l.href}" class="${page === l.href || (l.href === 'insights.html' && isInsightsPage) || (l.href === 'resources.html' && isResourcesPage) ? 'active' : ''}">${l.label}</a>`
+    `<a href="${l.href}" class="${page === l.href || (l.href === 'insights.html' && isInsightsPage) || (l.href === 'resources.html' && isResourcesPage) || (l.href === 'tlu.html' && isTluPage) ? 'active' : ''}">${l.label}</a>`
   ).join('');
   const mobileLinks = links.map(l =>
     `<a href="${l.href}" onclick="closeMobile()">${l.label}</a>`
