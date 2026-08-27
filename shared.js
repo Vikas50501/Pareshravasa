@@ -46,6 +46,8 @@ function renderNav() {
   <nav>
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
+        <img src="${LOGO_SRC}" alt="Shah Paresh &amp; Associates — Chartered Accountants" class="logo-img"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
         <div class="logo-fallback">
           <span class="r">Shah Paresh</span>
           <span class="s">&amp; Associates</span>
