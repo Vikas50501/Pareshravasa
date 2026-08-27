@@ -70,7 +70,9 @@ function renderFooter() {
     <div class="footer-main">
       <div class="container">
         <div class="footer-brand">
-          <div style="font-size:15px;font-weight:700;color:var(--white);margin-bottom:8px;line-height:1.5">Shah Paresh &amp; Associates<br><span style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.72)">Chartered Accountants</span></div>
+          <img src="${LOGO_SRC}" alt="Shah Paresh &amp; Associates — Chartered Accountants" class="logo-img"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+          <div style="display:none;font-size:15px;font-weight:700;color:var(--white);margin-bottom:8px;line-height:1.5">Shah Paresh &amp; Associates<br><span style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.72)">Chartered Accountants</span></div>
           <div style="font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:4px">Independent Tax Litigation Practice</div>
           <p>Established professional practice with over three decades of experience, now exclusively focused on tax litigation and appellate work in Income-tax and GST matters, including representation before tax authorities, appellate forums and courts across India.</p>
           <div style="font-size:12px;font-style:italic;color:var(--accent);margin-bottom:16px">Income-tax &amp; GST | Appellate Representation</div>
