@@ -23,7 +23,7 @@ function renderTopbar() {
 function renderNav() {
   const page = getPage();
   const isInsightsPage = page === 'insights.html' || page === 'blog.html' || page.startsWith('blog-') || page.startsWith('insight-');
-  const isResourcesPage = page === 'resources.html' || page === 'transition-compliance-calendar.html' || page === 'lic-library.html';
+  const isResourcesPage = page === 'resources.html' || page === 'transition-compliance-calendar.html';
   const isTluPage = page === 'tlu.html' || page === 'tlu-1.html';
   const links = [
     { href: 'index.html', label: 'Home' },
@@ -98,7 +98,7 @@ function renderFooter() {
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Chamber</h4>
+          <h4>The Firm</h4>
           <ul>
             <li><a href="about.html">About the Firm</a></li>
             <li><a href="about.html#team">Professional Leadership</a></li>
@@ -137,7 +137,7 @@ function renderFooter() {
     </div>
     <div class="footer-bottom">
       <div class="container">
-        <p>© 2026 Tax Litigation Chamber | www.pareshravasa.in</p>
+        <p>© 2026 Tax Litigation Practice | www.pareshravasa.in</p>
         <p>Shah Paresh &amp; Associates · Chartered Accountants</p>
       </div>
     </div>
